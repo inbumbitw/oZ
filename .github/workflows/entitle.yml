@@ -1,0 +1,19 @@
+name: blank
+
+on:
+  push:
+
+jobs:
+  lick:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        principal: ["dormitory", "eleventh", "sphere", "preference", "gift"]
+        plentiful: ["merchant", "brandy", "trait", "cannon"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java -jar oz
